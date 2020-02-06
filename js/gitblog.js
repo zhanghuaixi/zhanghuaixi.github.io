@@ -1,4 +1,4 @@
- var gitblog = function(config) {
+var gitblog = function(config) {
     var self = this;
 
     self.getUrlParam = function(name) {
@@ -619,7 +619,7 @@
                 }
                 data[i].body = data[i].body.replace(/<.*?>/g, "");
                 data[i].created_at = self.utc2localTime(data[i].created_at);
-                document.getElementById('issue-list').innerHTML += '<li><div id="details" class="basic-1"><div class="container"><div class="row"><div class="col-lg-6"><div class="text-container"><h2 class="title"><a href="content.html?id=' + data[i].number + '">' + data[i].title + '</a></h2><div class="excerpt"><p class="issue">' + data[i].body + '</p></div><ul class="list-unstyled li-space-lg meta"><li class="media"><i class="fas fa-square"></i><div class="media-body">' + data[i].user.login + '</div></li><li class="media"><i class="fas fa-square"></i><div class="media-body">' + labels_content + '</div></li><li class="media"><i class="fas fa-square"></i><div class="media-body date">' + data[i].created_at + '</div></li></ul></div></div></div></div></div></li>';
+                document.getElementById('issue-list').innerHTML += '<li><div id="details"class="basic-1"><div class="container"><div class="row"><div class="col-lg-6"><div class="text-container"><h2 class="title"><a href="content.html?id=' + data[i].number + '">' + data[i].title + '</a></h2><div class="excerpt"><p class="issue">' + data[i].body + '</p></div>' + '<ul class="list-unstyled li-space-lg meta"><li class="media"><i class="fas fa-square"></i><div class="media-body">' + data[i].user.login + '</div></li><li class="media"><i class="fas fa-square"></i><div class="media-body">' + labels_content + '</div></li><li class="media"><i class="fas fa-square"></i><div class="media-body">' + data[i].created_at + '</div></li></ul></div></div></div></div></div></li>';
             }
         },
         show: function(request_url) {
