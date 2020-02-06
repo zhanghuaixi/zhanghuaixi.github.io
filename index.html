@@ -5,20 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="stylesheet" href="css1/common.css">
     <link rel="icon" href="images/avatar.jpg">
-    <link rel="stylesheet" href="css1/bootstrap.min.css">
-    <link rel="stylesheet" href="css1/home.css">
   </head>
   <body>
     <label class="navi-button">MENU</label>
     <input type="text" class="search-input" placeholder="回车搜索">
     <img src="images/search.svg" class="search">
-    <ul class="main-navication1">
+    
+	  
+	<ul class="main-navication">
       <ul id="menu"></ul>
-      <hr>
       <ul id="friends"></ul>
     </ul>
+	
+	
+	
     <div class="main">
       <div class="page_header" ></div>
       <div class="author">
@@ -29,24 +30,26 @@
         <p class="name" id="instruction"></p>
         <p class="name">I am <text id="changerificwordspanid"></text> today!</p>
       </div>
-
-
-      <div class="container1">
-        <div class1="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1">
-          <ul id="issue-list" class="main_content1" style="padding-left: 0px; opacity: 1; transform: translateY(0px);">
-            <br>
-            <h4 class="title">加呀</h4>
-            </br>
+	  
+	  
+      <div class="container">
+		
+		
+         <ul id="issue-list">
+            <br><!--
+            <h4 class="title">内容加载中...</h4>-->
           </ul>
-        </div>
+		
+		
+		
         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 visible-lg visible-md" style="margin: 72px auto 0 auto;">
           <a style="line-height:1.1;font-weight:700;cursor:pointer;color:#808080;text-decoration: none">FEATURED TAGS</a>
           <div class="tags" style="margin-top:10px" id="tags"></div>
           <hr>
         </div>
       </div>
-
-
+	  
+	  
       <div style="text-align: center">
         <ul class="pagination" id="pages" style="display: none"></ul>
       </div>
@@ -54,6 +57,9 @@
         <div id='icon' style="display: flex;justify-content: center;padding: 0;align-items: center"></div>
         <div id="footer" style="text-align: center;background: #2c3e50;padding-top: 30px;color: white"></div>
       </div>
+	  
+	  
+	  
     </div>
   </body>
   <script src = "js/jquery.min.js"></script>
