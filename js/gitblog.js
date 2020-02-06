@@ -619,7 +619,7 @@ var gitblog = function(config) {
                 }
                 data[i].body = data[i].body.replace(/<.*?>/g, "");
                 data[i].created_at = self.utc2localTime(data[i].created_at);
-                document.getElementById('issue-list').innerHTML += '<li class="media"><div id="details"class="basic-1"><div class="container"><div class="row"><div class="col-lg-6"><div class="text-container"><h2 class="title"><a href="content.html?id=' + data[i].number + '">' + data[i].title + '</a></h2><div class="excerpt"><p class="issue">' + data[i].body + '</p></div>' + '<ul class="list-unstyled li-space-lg meta"><li class="media"><div class="media-body">' + data[i].user.login + '编辑于' + data[i].created_at + '</div></li><li class="media"><div class="media-body">' + labels_content + '</div></li></ul></div></div></div></div></div></li>';
+                document.getElementById('issue-list').innerHTML += '<li class="media"><div class="container"><div class="row"><div class="col-lg-6"><div class="text-container"><h2 class="title"><a href="content.html?id=' + data[i].number + '">' + data[i].title + '</a></h2><div class="excerpt"><p class="issue">' + data[i].body + '</p></div>' + '<ul class="list-unstyled li-space-lg meta"><li class="media"><div class="media-body">' + '作者｜' + data[i].user.login + '<br>' + '时间｜' + data[i].created_at + '<br>' + '标签｜' + labels_content + '</div></li></ul></div></div></div></div></div></li><br>';
             }
         },
         show: function(request_url) {
