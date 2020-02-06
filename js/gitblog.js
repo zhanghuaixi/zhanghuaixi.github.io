@@ -92,13 +92,12 @@ var gitblog = function(config) {
         show: function() {
             var menu = this;
             for(var name in config.menu) {
-                document.getElementById("menu").innerHTML += '<li><a href=' + config.menu[name] + '><span>' + name + '</span></a></li>';
+                document.getElementById("menu").innerHTML += '<li class="nav-item"><a class="nav-link page-scroll" href=' + config.menu[name] + '><span>' + name + '</span></a></li>';
             }
             if (Object.keys(config.friends).length != 0) {
                 var menu_friend = document.getElementById("friends");
-                menu_friend.innerHTML = '<li><text style="font-zise:14px"><span style="color: white;transform:translateX(4px)">友链：</span></text></li>';
                 for (var name in config.friends) {
-                    menu_friend.innerHTML += '<li><a href=' + config.friends[name] + ' target="_blank"><span>' + name + '</span></a></li>';
+                    menu_friend.innerHTML += '<li class="nav-item"><a class="nav-link page-scroll" href=' + config.friends[name] + ' target="_blank"><span>' + name + '</span></a></li>';
                 }
             }
             $(".search-input").on("blur",
