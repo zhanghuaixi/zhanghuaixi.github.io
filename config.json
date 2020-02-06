@@ -1,5 +1,5 @@
 {
-    "name": "imuncle",
+    "name": "zhanghuaixi",
     "repo": "zhanghuaixi.github.io",
     "client_id": "2ee8ee6a56400651bf27",
     "client_secret": "3f7b232940173e3ff64b5a117a11606b540edd7b",
@@ -7,7 +7,7 @@
     "instruction": "江湖的猫Yeah",
     "server_link": "http://119.23.8.25/gh-oauth-server.php",
     "filter": {
-        "creator": username
+        "creator": "zhanghuaixi",
         "state": "open"
     },
     "menu": {
