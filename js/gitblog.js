@@ -60,7 +60,7 @@ var gitblog = function(config) {
         hour = (hour<10)?'0'+hour:hour;
         minute = (minute<10)?'0'+minute:minute;
         second = (second<10)?'0'+second:second;
-        return year+'年'+month+'月'+date+'日'+' '+hour+':'+minute+':'+second;
+        return '编辑于'+year+'年'+month+'月'+date+'日'+' '+hour+':'+minute+':'+second;
     }
 
     String.prototype.replaceAll = function(a, b) {
@@ -92,13 +92,12 @@ var gitblog = function(config) {
         show: function() {
             var menu = this;
             for(var name in config.menu) {
-                document.getElementById("menu").innerHTML += '<li><a href=' + config.menu[name] + '><span>' + name + '</span></a></li>';
+                document.getElementById("menu").innerHTML += '<li class="nav-item"><a class="nav-link page-scroll" href=' + config.menu[name] + '><span>' + name + '</span></a></li>';
             }
             if (Object.keys(config.friends).length != 0) {
                 var menu_friend = document.getElementById("friends");
-                menu_friend.innerHTML = '<li><text style="font-zise:14px"><span style="color: white;transform:translateX(4px)">友链：</span></text></li>';
                 for (var name in config.friends) {
-                    menu_friend.innerHTML += '<li><a href=' + config.friends[name] + ' target="_blank"><span>' + name + '</span></a></li>';
+                    menu_friend.innerHTML += '<li class="nav-item"><a class="nav-link page-scroll" href=' + config.friends[name] + ' target="_blank"><span>' + name + '</span></a></li>';
                 }
             }
             $(".search-input").on("blur",
@@ -620,7 +619,7 @@ var gitblog = function(config) {
                 }
                 data[i].body = data[i].body.replace(/<.*?>/g, "");
                 data[i].created_at = self.utc2localTime(data[i].created_at);
-                document.getElementById('issue-list').innerHTML += '<li><p class="date">' + data[i].created_at + '</p><h4 class="title"><a href="content.html?id=' + data[i].number + '">' + data[i].title + '</a></h4><div class="excerpt"><p class="issue">' + data[i].body + '</p></div>' + '<ul class="meta"><li>' + data[i].user.login + '</li>' + labels_content + '</ul></li>';
+                document.getElementById('issue-list').innerHTML += '<li><p class="date">' + data[i].created_at + '</p><h4 class="title"><a href="content.html?id=' + data[i].number + '">' + data[i].title + '</a></h4><div class="excerpt"><p style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 6;-webkit-box-orient: vertical;">' + data[i].body + '</p></div>' + '<ul class="meta"><li>' + data[i].user.login + '</li>' + labels_content + '</ul></li>';
             }
         },
         show: function(request_url) {
