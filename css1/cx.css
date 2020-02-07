@@ -111,3 +111,19 @@ a {
     color:#bfbfbf;
     border-color:#bfbfbf
 }
+
+
+//数字限制
+.issue{
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 5;
+
+  -webkit-box-orient: vertical;
+
+}
